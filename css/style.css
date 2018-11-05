@@ -1,59 +1,87 @@
 @font-face {
+    font-family: 'Socicon';
+    src: url('fonts/Socicon.eot?484r1f');
+    src: url('fonts/Socicon.eot?484r1f#iefix') format('embedded-opentype'),
+        url('fonts/Socicon.woff2?484r1f') format('woff2'),
+        url('fonts/Socicon.ttf?484r1f') format('truetype'),
+        url('fonts/Socicon.woff?484r1f') format('woff'),
+        url('fonts/Socicon.svg?484r1f#Socicon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="socicon-"],
+[class*=" socicon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'Socicon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
     font-family: 'HUSET';
-    src: url('HUSET.eot');
-    src: url('HUSET.eot?#iefix') format('embedded-opentype'),
-        url('HUSET.woff2') format('woff2'),
-        url('HUSET.woff') format('woff'),
-        url('HUSET.ttf') format('truetype'),
-        url('HUSET.svg#HUSET') format('svg');
+    src: url('fonts/HUSET.eot');
+    src: url('fonts/HUSET.eot?#iefix') format('embedded-opentype'),
+        url('fonts/HUSET.woff2') format('woff2'),
+        url('fonts/HUSET.woff') format('woff'),
+        url('fonts/HUSET.ttf') format('truetype'),
+        url('fonts/HUSET.svg#HUSET') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Avenir';
-    src: url('AvenirNextLTPro-Italic.eot');
-    src: url('AvenirNextLTPro-Italic.eot?#iefix') format('embedded-opentype'),
-        url('AvenirNextLTPro-Italic.woff2') format('woff2'),
-        url('AvenirNextLTPro-Italic.woff') format('woff'),
-        url('AvenirNextLTPro-Italic.ttf') format('truetype'),
-        url('AvenirNextLTPro-Italic.svg#AvenirNextLTPro-Italic') format('svg');
+    src: url('fonts/AvenirNextLTPro-Italic.eot');
+    src: url('fonts/AvenirNextLTPro-Italic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/AvenirNextLTPro-Italic.woff2') format('woff2'),
+        url('fonts/AvenirNextLTPro-Italic.woff') format('woff'),
+        url('fonts/AvenirNextLTPro-Italic.ttf') format('truetype'),
+        url('fonts/AvenirNextLTPro-Italic.svg#AvenirNextLTPro-Italic') format('svg');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Avenir';
-    src: url('AvenirNextLTPro-Demi.eot');
-    src: url('AvenirNextLTPro-Demi.eot?#iefix') format('embedded-opentype'),
-        url('AvenirNextLTPro-Demi.woff2') format('woff2'),
-        url('AvenirNextLTPro-Demi.woff') format('woff'),
-        url('AvenirNextLTPro-Demi.ttf') format('truetype'),
-        url('AvenirNextLTPro-Demi.svg#AvenirNextLTPro-Demi') format('svg');
+    src: url('fonts/AvenirNextLTPro-Demi.eot');
+    src: url('fonts/AvenirNextLTPro-Demi.eot?#iefix') format('embedded-opentype'),
+        url('fonts/AvenirNextLTPro-Demi.woff2') format('woff2'),
+        url('fonts/AvenirNextLTPro-Demi.woff') format('woff'),
+        url('fonts/AvenirNextLTPro-Demi.ttf') format('truetype'),
+        url('fonts/AvenirNextLTPro-Demi.svg#AvenirNextLTPro-Demi') format('svg');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Avenir';
-    src: url('AvenirNextLTPro-DemiItalic.eot');
-    src: url('AvenirNextLTPro-DemiItalic.eot?#iefix') format('embedded-opentype'),
-        url('AvenirNextLTPro-DemiItalic.woff2') format('woff2'),
-        url('AvenirNextLTPro-DemiItalic.woff') format('woff'),
-        url('AvenirNextLTPro-DemiItalic.ttf') format('truetype'),
-        url('AvenirNextLTPro-DemiItalic.svg#AvenirNextLTPro-DemiItalic') format('svg');
+    src: url('fonts/AvenirNextLTPro-DemiItalic.eot');
+    src: url('fonts/AvenirNextLTPro-DemiItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/AvenirNextLTPro-DemiItalic.woff2') format('woff2'),
+        url('fonts/AvenirNextLTPro-DemiItalic.woff') format('woff'),
+        url('fonts/AvenirNextLTPro-DemiItalic.ttf') format('truetype'),
+        url('fonts/AvenirNextLTPro-DemiItalic.svg#AvenirNextLTPro-DemiItalic') format('svg');
     font-weight: bold;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Avenir';
-    src: url('AvenirNextLTPro-Regular.eot');
-    src: url('AvenirNextLTPro-Regular.eot?#iefix') format('embedded-opentype'),
-        url('AvenirNextLTPro-Regular.woff2') format('woff2'),
-        url('AvenirNextLTPro-Regular.woff') format('woff'),
-        url('AvenirNextLTPro-Regular.ttf') format('truetype'),
-        url('AvenirNextLTPro-Regular.svg#AvenirNextLTPro-Regular') format('svg');
+    src: url('fonts/AvenirNextLTPro-Regular.eot');
+    src: url('fonts/AvenirNextLTPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/AvenirNextLTPro-Regular.woff2') format('woff2'),
+        url('fonts/AvenirNextLTPro-Regular.woff') format('woff'),
+        url('fonts/AvenirNextLTPro-Regular.ttf') format('truetype'),
+        url('fonts/AvenirNextLTPro-Regular.svg#AvenirNextLTPro-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -393,10 +421,66 @@ button:hover {
 /*footer*/
 
 footer {
-    height: 100px;
     width: 100%;
     background-color: var(--blue);
-    margin-top: 50px;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+footer p {
+    color: var(--red_tint);
+    margin-bottom: 3px;
+    margin-top: 0;
+}
+
+.footer_contact {
+    grid-column: 1 / 4;
+    margin-left: 30px;
+}
+
+.footer_opening {
+    grid-column: 4 / 6;
+}
+
+.footer_opening a {
+    color: var(--red_tint);
+}
+
+.footer_social {
+    grid-column: 6 / 9;
+    text-align: right;
+    margin-right: 30px;
+}
+
+.footer_social a {
+    color: var(--red_tint);
+    font-size: 1.7rem;
+    margin-left: 15px;
+}
+
+.footer_social a:hover {
+    text-decoration: none;
+    color: var(--red);
+}
+
+.socicon-instagram:before {
+    content: "\e044";
+}
+
+.socicon-facebook:before {
+    content: "\e028";
+}
+
+.socicon-twitter:before {
+    content: "\e08d";
+}
+
+.socicon-flickr:before {
+    content: "\e02d";
 }
 
 /* ---------------------------- */
