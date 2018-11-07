@@ -46,8 +46,9 @@
 			let str = event.acf.dato;
 			console.log("hel dato: " + str);
 
-			//	omform måned-nr til fx JAN
-			let eventMaaned = str.substring(4, 6);
+			//	omform måned fra tal til 3 bugstaver - fjern evt. 0 i start af streng
+			let eventMaaned = str.substring(4, 6).replace(/^0+/, '');
+
 			if (eventMaaned == 01) {
 				eventMaaned = "jan";
 			}
@@ -104,7 +105,7 @@
 
 			console.log("id: " + event.id);
 			klon.querySelector(".event-wrapper").addEventListener("click", () => {
-				window.location.href = "events.html?id=event_" + event.id;
+				window.location.href = "events.html?id=" + event.id + "&preload=" + ("src", event.acf.billede);
 			});
 
 			//	    tilføj html DOM

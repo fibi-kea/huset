@@ -3,10 +3,18 @@
 	let eventTemplate = document.querySelector("[data-template]");
 	let eventContainer = document.querySelector("[data-container]");
 
-	//		hent og gem URL variabeler
+	//	hent og gem URL variabeler
 	let urlParams = new URLSearchParams(window.location.search);
+	let preload = urlParams.get("preload");
+
+	//	føj css-ok navn til id-nummer
 	let id = urlParams.get("id");
-	console.log("urlParams id er: " + id);
+	id = "event_" + id;
+	console.log("urlParams id er: " + id)
+
+	//	preload img-url fra link, så accordion højde passer
+	let preloadImage = new Image();
+	preloadImage.src = preload;
 
 	//	dokument DOM loadet
 	document.addEventListener("DOMContentLoaded", hentJson);
@@ -28,6 +36,7 @@
 			return a.acf.dato - b.acf.dato;
 		});
 
+
 		visEvents();
 	}
 
@@ -38,40 +47,41 @@
 		events.forEach(event => {
 			console.log(event);
 
-			//		Klon? ja tak
+			//	Klon? ja tak
 			let klon = eventTemplate.cloneNode(true).content;
 
 			//	udtræk dato fra acf
 			let str = event.acf.dato;
 			console.log("hel dato: " + str);
 
-			//	omform måned fra tal til 3 bugstaver
-			let eventMaaned = str.substring(4, 6);
-			if (eventMaaned == 01) {
+			//	omform måned fra tal til 3 bugstaver - fjern evt. 0 i start af streng
+			let eventMaaned = str.substring(4, 6).replace(/^0+/, '');
+
+			if (eventMaaned == 1) {
 				eventMaaned = "jan";
 			}
-			if (eventMaaned == 02) {
+			if (eventMaaned == 2) {
 				eventMaaned = "feb";
 			}
-			if (eventMaaned == 03) {
+			if (eventMaaned == 3) {
 				eventMaaned = "mar";
 			}
-			if (eventMaaned == 04) {
+			if (eventMaaned == 4) {
 				eventMaaned = "apr";
 			}
-			if (eventMaaned == 05) {
+			if (eventMaaned == 5) {
 				eventMaaned = "maj";
 			}
-			if (eventMaaned == 06) {
+			if (eventMaaned == 6) {
 				eventMaaned = "jun";
 			}
-			if (eventMaaned == 07) {
+			if (eventMaaned == 7) {
 				eventMaaned = "jul";
 			}
-			if (eventMaaned == 08) {
+			if (eventMaaned == 8) {
 				eventMaaned = "aug";
 			}
-			if (eventMaaned == 09) {
+			if (eventMaaned == 9) {
 				eventMaaned = "sep";
 			}
 			if (eventMaaned == 10) {
@@ -128,11 +138,11 @@
 				klon.querySelector("[data-kob-knap]").innerHTML = "<div class='event_door'>Gratis</div>";
 			}
 
-			//			klon.querySelector("[data-billede]").setAttribute("src", event.acf.billede);
-			//			klon.querySelector("[data-billede]").setAttribute("alt", "Eventbillede for: " + event.title.rendered);
+			klon.querySelector("[data-billede]").setAttribute("src", event.acf.billede);
+			klon.querySelector("[data-billede]").setAttribute("alt", "Eventbillede for: " + event.title.rendered);
 			//			klon.querySelector("[data-sted]").textContent = event.acf.sted;
 
-			//	    tilføj html DOM
+			// tilføj html DOM
 			eventContainer.appendChild(klon);
 			console.log("loop er kørt");
 		});
@@ -141,7 +151,11 @@
 		if (id !== null) {
 			window.location.hash = "#" + id;
 			console.log("Hop til id: " + id);
+
+			//	Sæt accordion til aktiv
 			document.querySelector("#" + id).classList.toggle("active");
+			console.log("sæt " + id + " til aktiv");
+
 			let panel = document.querySelector("#" + id).nextElementSibling;
 			if (panel.style.maxHeight) {
 				panel.style.maxHeight = null;
@@ -152,3 +166,22 @@
 			console.log("Der er ikke noget id");
 		}
 	}
+
+	//-------------------------
+
+	//Accordian-style generel
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+		acc[i].addEventListener("click", function () {
+			this.classList.toggle("active");
+			var panel = this.nextElementSibling;
+			if (panel.style.maxHeight) {
+				panel.style.maxHeight = null;
+			} else {
+				panel.style.maxHeight = panel.scrollHeight + "px";
+			}
+		});
+	}
+	//-------------------------
