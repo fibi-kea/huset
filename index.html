@@ -2,95 +2,103 @@
 <html lang="da">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Huset</title>
-    <link rel="stylesheet" href="css/style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Huset</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <head>
-        <div class="logo"><img src="img/logo.png" alt="logo"></div>
-        <nav>
-            <ul>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="index.html">Husets etager</a></li>
-                <li><a href="index.html">Frivillig</a></li>
-                <li><a href="index.html">Udlejning</a></li>
-                <li><a href="index.html">Om huset</a></li>
-                <li><a href="index.html">Kontakt</a></li>
-            </ul>
-        </nav>
+	<head>
+		<div class="logo"><img src="img/logo.png" alt="logo"></div>
+		<nav>
+			<ul>
+				<li><a href="index.html">Forside</a></li>
+				<li><a href="events.html">Events</a></li>
+				<li><a href="index.html">Husets etager</a></li>
+				<li><a href="index.html">Frivillig</a></li>
+				<li><a href="index.html">Udlejning</a></li>
+				<li><a href="index.html">Om huset</a></li>
+				<li><a href="index.html">Kontakt</a></li>
+			</ul>
+		</nav>
 
 
-        <!--Tamplate-->
-        <div class="splash">
-            <img src="img/diy1.jpg" alt="">
-        </div>
-    </head>
+		<!--Tamplate-->
+		<div class="splash">
+			<img src="img/diy1.jpg" alt="">
+		</div>
+	</head>
 
-    <main>
-        <div class="page_title">
-            <h1><span>Forside</span></h1>
-        </div>
+	<main>
+		<div class="page_title">
+			<h1><span>Forside</span></h1>
+		</div>
 
-        <section class="kommende_events">
-            <div class="content">
-                <h2 class="rubrik">Kommende events</h2>
-            </div>
-            <div class="content" data-container></div>
-            <div class="content">
-                <button class="se_events">Se alle events</button>
-            </div>
-        </section>
+		<section class="kommende_events">
 
-        <template data-template>
-            <article class="event-wrapper">
-                <div class="dato-box">
-                    <div class="dato" data-dato></div>
-                    <div class="maaned" data-maaned></div>
-                </div>
-                <div class="billede"><img data-billede src="" alt=""></div>
-                <div class="sted" data-sted></div>
-                <div class="title" data-title></div>
-            </article>
-        </template>
+			<!--siderubrik-->
+			<div class="content">
+				<h2 class="rubrik">Kommende events</h2>
+			</div>
 
-    </main>
+			<!--events fra wordpress-->
+			<div class="content" data-container></div>
 
-    <footer>
-        <div class="footer_contact">
-            <p><span class="bold">HUSET-KBH</span></p>
-            <p>Rådhusstræde 13<br>
-                1466 København K<br>
-                Tlf: 21 51 21 51<br>
-                info@huset-kbh.dk
-            </p>
-        </div>
+			<!--knap til eventside-->
+			<div class="content">
+				<div class="alle_events_knap"></div>
+				<a href="events.html" class="alle_events">Se alle events</a>
+			</div>
+		</section>
 
-        <div class="footer_opening">
-            <p><span class="bold">ÅBNINGSTIDER:</span></p>
-            <p><a href="">Husets Reception</a><br>
-                <a href="">Bastard Café</a><br>
-                <a href="">Spisehuset Fair</a>
-            </p>
+		<template data-template>
+			<article class="event-wrapper">
+				<div class="dato-box">
+					<div class="dato" data-dato></div>
+					<div class="maaned" data-maaned></div>
+				</div>
+				<div class="billede"><img data-billede src="" alt=""></div>
+				<div class="sted" data-sted></div>
+				<div class="title" data-title></div>
+			</article>
+		</template>
 
-        </div>
+	</main>
 
-        <div class="footer_social">
-            <a class="socicon-facebook" target="_blank" href="https://www.facebook.com/Huset.Koebenhavn"></a>
-            <a class="socicon-instagram" target="_blank" href="https://www.instagram.com/husetkbh/"></a>
-            <a class="socicon-twitter" target="_blank" href="https://twitter.com/HusetKBH"></a>
-            <a class="socicon-flickr" target="_blank" href="https://www.flickr.com/photos/135006755@N04/"></a>
-        </div>
+	<footer>
+		<div class="footer_contact">
+			<p><span class="bold">HUSET-KBH</span></p>
+			<p>Rådhusstræde 13<br>
+				1466 København K<br>
+				Tlf: 21 51 21 51<br>
+				info@huset-kbh.dk
+			</p>
+		</div>
 
-    </footer>
+		<div class="footer_opening">
+			<p><span class="bold">ÅBNINGSTIDER:</span></p>
+			<p><a href="">Husets Reception</a><br>
+				<a href="">Bastard Café</a><br>
+				<a href="">Spisehuset Fair</a>
+			</p>
 
-    <!--Javascript-->
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="js/huset.js"></script>
-    <script src="js/forside.js"></script>
+		</div>
+
+		<div class="footer_social">
+			<a class="socicon-facebook" target="_blank" href="https://www.facebook.com/Huset.Koebenhavn"></a>
+			<a class="socicon-instagram" target="_blank" href="https://www.instagram.com/husetkbh/"></a>
+			<a class="socicon-twitter" target="_blank" href="https://twitter.com/HusetKBH"></a>
+			<a class="socicon-flickr" target="_blank" href="https://www.flickr.com/photos/135006755@N04/"></a>
+		</div>
+
+	</footer>
+
+	<!--Javascript-->
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="js/huset.js"></script>
+	<script src="js/forside.js"></script>
 </body>
 
 </html>
