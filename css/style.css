@@ -543,6 +543,50 @@ button:hover {
 	white-space: nowrap;
 }
 
+
+/* ---------------------------- */
+
+/*Husets etager*/
+.etager {
+	padding-left: 30px;
+	padding-right: 30px;
+	max-width: 800px;
+	margin: auto;
+}
+
+.etager_single {
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-gap: 20px;
+	margin-top: 70px;
+	border-bottom: 1px;
+	border-bottom-style: dotted;
+	padding-bottom: 25px;
+}
+
+.etager_img {
+	grid-column: 1 / 4;
+}
+
+.etager_img img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.etager_txt {
+	grid-column: 4 / 9;
+}
+
+.etager h2 {
+	margin-top: 0;
+}
+
+/* ---------------------------- */
+
+
+
 /*the accordion panel*/
 
 /* Style the buttons that are used to open and close the accordion panel */
