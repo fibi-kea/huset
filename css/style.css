@@ -134,7 +134,7 @@ h1 span {
     border-radius: 2px;
 }
 
-.title {
+.page_title {
     position: absolute;
     top: -25px;
     left: 0;
@@ -285,6 +285,89 @@ nav li {
     100% {
         -webkit-transform: scale(1);
     }
+}
+
+/* ---------------------------- */
+
+/*forsiden*/
+
+.kommende_events img {
+    width: 100%;
+}
+
+.kommende_events {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: auto;
+}
+
+.kommende_events .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+}
+
+.kommende_events .event-wrapper {
+    position: relative;
+}
+
+.kommende_events .rubrik {
+    grid-column: 1 / 4;
+}
+
+.kommende_events .dato-box {
+    position: absolute;
+    padding: 13px 16px;
+    top: -10px;
+    left: -10px;
+    background-color: #24195d;
+    color: #fff;
+    text-align: center;
+    border-right: 7px solid #fff;
+    border-bottom: 7px solid #fff;
+    line-height: 130%;
+    z-index: 30;
+}
+
+.kommende_events .dato {
+    font-size: 150%;
+}
+
+.kommende_events .maaned {
+    text-transform: uppercase;
+    font-size: 70%;
+}
+
+.kommende_events .billede {
+    max-height: 30vw;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.kommende_events .sted {
+    font-style: italic;
+}
+
+.kommende_events .title {
+    font-weight: bold;
+}
+
+.kommende_events .postlistview div:first-letter {
+    text-transform: uppercase;
+}
+
+.kommende_events button {
+    padding: 10px;
+    height: 40px;
+    margin: auto;
+    background-color: #24195d;
+    grid-column: 3;
+    color: #fff;
+}
+
+.kommende_events button:hover {
+    background-color: #fff;
+    color: #24195d;
 }
 
 /* ---------------------------- */
@@ -484,3 +567,40 @@ footer p {
 }
 
 /* ---------------------------- */
+
+/*- - - - - - - - - - - - - media queries - - - - - - - - - - - - -*/
+
+
+@media screen and (min-width: 768px) {
+
+    .kommende_events .content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .kommende_events .billede {
+        max-height: 15vw;
+    }
+
+
+
+    @media screen and (min-width: 1080px) {
+
+        .kommende_events .content {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .kommende_events .billede {
+            max-height: 10vw;
+        }
+
+    }
+
+
+
+    @media screen and (min-width: 1280px) {
+
+        .kommende_events .content {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+    }

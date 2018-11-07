@@ -31,32 +31,31 @@
     </head>
 
     <main>
-        <div class="title">
-            <h1><span>Bastard Cafe</span></h1>
+        <div class="page_title">
+            <h1><span>Forside</span></h1>
         </div>
 
-        <section class="standard">
-            <h2>Bastard Café – brætspil, kaffe og hygge!</h2>
-            <p>I Husets stueetage finder du den populære brætspilscafé Bastard Café. Her kan du spille et utal af brætspil og kortspil og samtidig nyde en god cremet kop kaffe, en lækker mikro-brygget øl eller få lidt til maven i form af chili fries eller deluxe toasts.</p>
-
-            <h2>Kælderen</h2>
-            <p>I kælderen i forhuset har Bastard Café udvidet med Bastard Café Downstairs, hvor du selvfølgelig også kan spille brætspil. Men her kan du også nyde en lidt mere bar-agtig stemning og prøve nogle af deres mange fantastiske gin!</p>
-
-            <p>Det er lige meget, om du aldrig har spillet et spil, kun er vant til 500, ludo og matador eller er super spilnørd! Der er plads til alle! Og Bastard Café har altid en frivillig brætspilsguru, der står klar til at hjælpe med reglerne.</p>
-
-            <p>Kom også med til en af de sjove temaaftener. Vi holder turneringer og sociale selskabslege, hvor du kan lære nye mennesker eller spil at kende. Tjek kalenderen her.</p>
-
-            <p>Bemærk at næsten al kommunikation i Bastard Café foregår på engelsk, da en stor del af personalet engelsktalende.</p>
-
-
-            <h3>Bastard Café åbningstider</h3>
-            <p><span class="bold">Mandag-torsdag: </span>12.00-00.00<br>
-                <span class="bold">Fredag-lørdag: </span>12.00-02.00<br>
-                <span class="bold">Søndag: </span>12.00-00.00</p>
-
-            <p>Se mere på <a href="http://www.bastardcafe.dk/">Bastard Cafés hjemmeside</a></p>
+        <section class="kommende_events">
+            <div class="content">
+                <h2 class="rubrik">Kommende events</h2>
+            </div>
+            <div class="content" data-container></div>
+            <div class="content">
+                <button class="se_events">Se alle events</button>
+            </div>
         </section>
-        <!--Tamplate-->
+
+        <template data-template>
+            <article class="event-wrapper">
+                <div class="dato-box">
+                    <div class="dato" data-dato></div>
+                    <div class="maaned" data-maaned></div>
+                </div>
+                <div class="billede"><img data-billede src="" alt=""></div>
+                <div class="sted" data-sted></div>
+                <div class="title" data-title></div>
+            </article>
+        </template>
 
     </main>
 
@@ -91,6 +90,7 @@
     <!--Javascript-->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="js/huset.js"></script>
+    <script src="js/forside.js"></script>
 </body>
 
 </html>
