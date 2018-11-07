@@ -129,7 +129,7 @@
 				klon.querySelector("[data-kob-knap]").innerHTML = "<a href='' class='event_buy' target='_blank' data-kob>Køb billet</a>";
 				klon.querySelector("[data-kob]").setAttribute("href", event.acf.kob);
 			} else {
-				klon.querySelector("[data-kob-knap]").innerHTML = "<div class='event_door'>Dørsalg</div>";
+				klon.querySelector("[data-kob-knap]").innerHTML = "<div class='event_door'>Køb billet<br>i døren</div>";
 			}
 
 			// Hvis arrangementet er text-string "gratis", så flyt det til sidste kolonne
@@ -140,7 +140,8 @@
 
 			klon.querySelector("[data-billede]").setAttribute("src", event.acf.billede);
 			klon.querySelector("[data-billede]").setAttribute("alt", "Eventbillede for: " + event.title.rendered);
-			//			klon.querySelector("[data-sted]").textContent = event.acf.sted;
+			klon.querySelector("[data-content]").innerHTML = event.content.rendered;
+			klon.querySelector("[data-sted]").textContent = event.acf.sted;
 
 			// tilføj html DOM
 			eventContainer.appendChild(klon);

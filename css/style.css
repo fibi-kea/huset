@@ -540,6 +540,7 @@ button:hover {
 	font-size: 1.4rem;
 	text-align: center;
 	white-space: nowrap;
+	text-decoration: none;
 }
 
 .events .event_buy:hover {
@@ -554,13 +555,45 @@ button:hover {
 	white-space: nowrap;
 }
 
+.events .detaljer {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	background-color: var(--red_tint);
+}
+
+.events .imagebar {
+	padding: 0 0 20px 20px;
+}
+
+.events .billede {
+	line-height: 0;
+}
+
+.events .sidebar {
+	padding: 0 75px 40px 20px;
+}
+
+.events .sted {
+	font-size: 1.8rem;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.events .content {}
+
+.events .content::before {
+	content: "Eventdetaljer:";
+	font-weight: bold;
+}
+
+
 /*the accordion panel*/
 
 /* Style the buttons that are used to open and close the accordion panel */
 
 .events .accordion {
 	cursor: url(/img/open.png), auto;
-	padding: 10px;
+	padding: 7px;
 	text-align: left;
 	border: none;
 	outline: none;
@@ -583,8 +616,6 @@ button:hover {
 /* Style the accordion panel. Note: hidden by default */
 
 .events .panel {
-	padding: 0 18px;
-	background-color: white;
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.4s ease-out;
@@ -660,12 +691,12 @@ footer p {
 }
 
 .footer_contact {
-	grid-column: 1 / 4;
+	grid-column: 1 / 3;
 	margin-left: 30px;
 }
 
 .footer_opening {
-	grid-column: 4 / 6;
+	grid-column: 3 / 6;
 }
 
 .footer_opening a {
