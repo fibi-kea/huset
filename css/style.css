@@ -552,6 +552,7 @@ button:hover {
 	padding-right: 30px;
 	max-width: 800px;
 	margin: auto;
+	color: transparent;
 }
 
 .etager_single {
