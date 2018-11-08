@@ -368,9 +368,10 @@ nav li {
 	font-style: italic;
 }
 
-.kommende_events .title {
+.kommende_events h2 {
 	font-weight: bold;
 	font-size: 2rem;
+	margin-top: 0;
 }
 
 .kommende_events .postlistview div:first-letter {
@@ -624,9 +625,8 @@ button:hover {
 /* ---------------------------- */
 
 
-/* ---------------------------- */
-
 /*Husets etager*/
+
 .etager {
 	padding-left: 30px;
 	padding-right: 30px;
@@ -661,6 +661,28 @@ button:hover {
 
 .etager h2 {
 	margin-top: 0;
+}
+
+.etager .linkwrapper {
+	margin-top: 20px;
+}
+
+.etager .etager_link {
+	padding: 10px;
+	width: 100%;
+	background-color: var(--blue);
+	transition: 0.3s;
+	font-size: 1.4rem;
+	text-align: center;
+	color: white;
+	border: 1px solid var(--blue);
+}
+
+.etager .etager_link:hover {
+	background-color: #fff;
+	color: var(--blue);
+	border: 1px solid var(--blue);
+	text-decoration: none;
 }
 
 /* ---------------------------- */
@@ -751,8 +773,6 @@ footer p {
 		max-height: 15vw;
 	}
 
-
-
 	@media screen and (min-width: 1080px) {
 
 		.kommende_events .content {
@@ -762,15 +782,11 @@ footer p {
 		.kommende_events .billede {
 			max-height: 10vw;
 		}
-
 	}
-
-
 
 	@media screen and (min-width: 1280px) {
 
 		.kommende_events .content {
 			grid-template-columns: repeat(5, 1fr);
 		}
-
 	}

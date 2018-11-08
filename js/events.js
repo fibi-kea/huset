@@ -5,7 +5,7 @@
 
 	//	hent og gem URL variabeler
 	let urlParams = new URLSearchParams(window.location.search);
-	let preload = urlParams.get("preload");
+//	let preload = urlParams.get("preload");
 
 	//	føj css-ok navn til id-nummer
 	let id = urlParams.get("id");
@@ -13,8 +13,8 @@
 	console.log("urlParams id er: " + id)
 
 	//	preload img-url fra link, så accordion højde passer
-	let preloadImage = new Image();
-	preloadImage.src = preload;
+//	let preloadImage = new Image();
+//	preloadImage.src = preload;
 
 	//	dokument DOM loadet
 	document.addEventListener("DOMContentLoaded", hentJson);

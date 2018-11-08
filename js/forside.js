@@ -105,7 +105,8 @@
 
 			console.log("id: " + event.id);
 			klon.querySelector(".event-wrapper").addEventListener("click", () => {
-				window.location.href = "events.html?id=" + event.id + "&preload=" + ("src", event.acf.billede);
+				window.location.href = "events.html?id=" + event.id;
+//				window.location.href = "events.html?id=" + event.id + "&preload=" + ("src", event.acf.billede);
 			});
 
 			//	    tilføj html DOM
