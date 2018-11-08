@@ -37,11 +37,12 @@
 			let klon = etageTemplate.cloneNode(true).content;
 
 			klon.querySelector("[data-splash_image]").setAttribute("src", etage.acf.splash_image.sizes.medium_large);
-			klon.querySelector("[data-link]").addEventListener("click", () => {
 
-				//	Link fra billede
+			//	Link fra billede
+			klon.querySelector("[data-splash_image]").addEventListener("click", () => {
 				window.location.href = "etager.html?id=" + etage.id;
 			});
+
 			console.log(etage.acf.splash_image);
 			klon.querySelector("[data-title]").textContent = etage.title.rendered;
 			klon.querySelector("[data-beskrivelse]").textContent = etage.acf.kort_beskrivelse;
