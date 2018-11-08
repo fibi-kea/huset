@@ -114,3 +114,46 @@
 			console.log("loop er kørt");
 		});
 	}
+
+//Tilmelding - nyhedsbrev
+
+let modal = document.querySelector("#modal");
+        let tilmeld = document.querySelector("#tilmeld");
+        let close = document.querySelector("#close");
+
+        //kode til at svar teksten bliver vist
+        let svartekst = "";
+        document.querySelector("form").addEventListener("submit", ajaxCall);
+
+        //kode
+        async function ajaxCall(e) {
+            e.preventDefault();
+            let navn = this.querySelector("input[type=text]").value;
+            console.log(navn);
+            let url = "formtest1.php?navn=" + navn;
+            let svar = await fetch(url);
+            svartekst = await svar.text();
+            show();
+            this.querySelector("input[type=text]").value = "";
+        }
+
+        function show(response) {
+            document.querySelector("#response").textContent = svartekst;
+        }
+
+        tilmeld.addEventListener("click", visModal);
+
+        function visModal() {
+
+            //ved klik på tilmeldingsboxen vises modal vindu med indhold.
+            modal.classList.add("vis");
+
+            //ved klik på close button fjernes modal vinduet med indholdet.
+            close.addEventListener("click", skjulModal);
+
+        }
+
+        function skjulModal() {
+            //css med modal vis bliver skjult igen
+            modal.classList.remove("vis");
+        }

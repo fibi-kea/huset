@@ -418,6 +418,161 @@ nav li {
 	text-decoration: none;
 }
 
+
+/* ---------------------------- */
+
+
+/*        style af tilmeldingsblanket*/
+
+#tilmeld {
+	background-color: #fbe4ef;
+	width: 20vh;
+	height: 12vh;
+	border-radius: 3.5px;
+	border: none;
+	text-align: center;
+	position: fixed;
+	right: 2vw;
+	bottom: 2vw;
+	z-index: 300;
+}
+
+#tilmeld p {
+	color: #26225c;
+	font-weight: bold;
+}
+
+/* css der bliver kaldt nede i javascript´en der gør at modal vinduet bliver åbnet*/
+
+#modal.vis {
+	opacity: 1;
+	pointer-events: all;
+}
+
+/* css til luk knappen*/
+
+#close {
+	height: 20px;
+	width: 50px;
+	border-radius: 3.5px;
+	border: none;
+	background-color: #fbe4ef;
+	color: #26225c;
+	margin: 3px;
+}
+
+/* css til luk knappens hover*/
+
+#close:hover,
+#close:focus {
+	color: #26225c;
+	text-decoration: none;
+	cursor: pointer;
+	margin: 5px;
+}
+
+
+/* css til modal vinduet*/
+
+#modal {
+	background-color: rgba(251, 228, 239, 0.9);
+	opacity: 0;
+	pointer-events: none;
+	transition: all 1s;
+	position: fixed;
+	z-index: 300;
+	padding: 30px;
+	/*            display: none;*/
+}
+
+/* css til model content*/
+
+#modal-content {
+	margin: 5px;
+}
+
+/* css til submit knappen */
+
+input[type=submit] {
+	width: 50px;
+	height: 25px;
+	background-color: #26225c;
+	color: white;
+	font-size: 15px;
+	text-align: center;
+	margin: 5px;
+	border-radius: 3.5px;
+	float: right;
+}
+
+/* css til email feltet*/
+
+input[type=email]:hover {
+	background-color: rgba(38, 34, 92, 0.47);
+	border-radius: 3.5px;
+}
+
+/* css til navne feltet*/
+
+input[type=text]:hover {
+
+	background-color: rgba(38, 34, 92, 0.47);
+	border-radius: 3.5px;
+}
+
+/* css til erklæring feltet*/
+
+input[type=checkbox] {
+
+	background-color: rgba(38, 34, 92, 0.47);
+	margin-right: -0;
+	margin-right: 5px;
+
+
+}
+
+/* css til de overordnede input*/
+
+input {
+	border-radius: 3.5px;
+	margin: 5px;
+}
+
+
+/* media screen til blankettens placering*/
+
+@media screen and (min-width: 425px) {
+	#modal {
+		right: 10vw;
+		top: 20vw;
+		width: 80vw;
+		height: 80vw;
+	}
+}
+
+/* media screen til blankettens placering*/
+
+@media screen and (min-width: 730px) {
+	#modal {
+		width: 50vw;
+		height: 50vw;
+		right: 25vw;
+		top: 10vw;
+	}
+}
+
+/* media screen til blankettens placering*/
+
+@media screen and (min-width: 1125px) {
+	#modal {
+		width: 30vw;
+		height: 50vw;
+		right: 0vw;
+		bottom: 0vw;
+	}
+}
+
+
 /* ---------------------------- */
 
 /*events*/

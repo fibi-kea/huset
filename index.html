@@ -97,6 +97,33 @@
 		</div>
 	</footer>
 
+	<!-- Knap til at åbne modal vindue/tilmeldings formular-->
+
+	<button id="tilmeld">
+		<p>Tilmeld dig vores nyhedsbrev!</p>
+	</button>
+
+	<!-- html for modal   -->
+	<section id="modal">
+		<!-- lukke knap  -->
+		<button id="close">Luk</button>
+		<!--modal sidens indhold i input tags indholdet bliver bestemt af type tagget -->
+		<div id="modal-content">
+			<form>
+				<h1>Tilmeld dig vores nyhedsbrev!</h1>
+				<p> Bliv informeret om udvalgte events og festivaler. Følg med i nogle af de ting der foregår i Huset-KBH gennem sjove fortællinger og interviews. Få adgang til sjove konkurrencer og særlige tilbud.</p>
+				<input id="navn" type="text" placeholder="Dit navn" required>
+				<input id="email" type="email" placeholder="Din email" required><br>
+				<label>
+					<input type="checkbox" name="remember" required>Ja, jeg ønsker at tilmelde mig Husets Nyhedsbrev
+				</label><br>
+				<p> Ved at klikke ja erklære du dig enig med vores politik om person data <a href="https://huset-kbh.dk/kontakt-huset-kbh-kontakt-huset/persondata/"> læs mere her</a> </p>
+				<input type="submit" value="send"> <span id="response"> </span> <br>
+
+			</form>
+		</div>
+	</section>
+
 	<!--Javascript-->
 	<script src="js/forside.js"></script>
 </body>
