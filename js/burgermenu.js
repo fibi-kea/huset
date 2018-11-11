@@ -14,7 +14,7 @@
 			console.log("toggleMenu");
 			document.querySelector(".burger").classList.toggle("change");
 			document.querySelector("nav").classList.toggle("show");
-			document.querySelector(".logo").classList.toggle("hide");
+			document.querySelector("header").classList.toggle("show");
 			document.querySelector(".burger").classList.toggle("pulse");
 		}
 
@@ -22,7 +22,7 @@
 			console.log("closeMenu");
 			document.querySelector(".burger").classList.remove("change");
 			document.querySelector("nav").classList.remove("show");
-			document.querySelector(".logo").classList.remove("hide");
+			document.querySelector("header").classList.remove("show");
 			document.querySelector(".burger").classList.remove("pulse");
 		}
 		document.querySelector(".burger").addEventListener("click", toggleMenu);
