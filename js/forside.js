@@ -106,7 +106,7 @@
 			console.log("id: " + event.id);
 			klon.querySelector(".event-wrapper").addEventListener("click", () => {
 				window.location.href = "events.html?id=" + event.id;
-//				window.location.href = "events.html?id=" + event.id + "&preload=" + ("src", event.acf.billede);
+				//				window.location.href = "events.html?id=" + event.id + "&preload=" + ("src", event.acf.billede);
 			});
 
 			//	    tilføj html DOM
@@ -115,45 +115,46 @@
 		});
 	}
 
-//Tilmelding - nyhedsbrev
+	//Tilmelding - nyhedsbrev
 
-let modal = document.querySelector("#modal");
-        let tilmeld = document.querySelector("#tilmeld");
-        let close = document.querySelector("#close");
+	let modal = document.querySelector("#modal");
+	let tilmeld = document.querySelector("#tilmeld");
+	let close = document.querySelector("#close");
 
-        //kode til at svar teksten bliver vist
-        let svartekst = "";
-        document.querySelector("form").addEventListener("submit", ajaxCall);
+	//kode til at svar teksten bliver vist
+	let svartekst = "";
+	document.querySelector("form").addEventListener("submit", ajaxCall);
 
-        //kode
-        async function ajaxCall(e) {
-            e.preventDefault();
-            let navn = this.querySelector("input[type=text]").value;
-            console.log(navn);
-            let url = "formtest1.php?navn=" + navn;
-            let svar = await fetch(url);
-            svartekst = await svar.text();
-            show();
-            this.querySelector("input[type=text]").value = "";
-        }
+	//kode
+	async function ajaxCall(e) {
+		e.preventDefault();
+		let navn = this.querySelector("input[name=navn]").value;
+		let email = this.querySelector("input[name=email]").value;
+		let url = "form_nyhedsbrev.php?navn=" + navn + "&email=" + email;
+		let svar = await fetch(url);
+		svartekst = await svar.text();
+		show();
+		this.querySelector("input[name=navn]").value = "";
+		this.querySelector("input[name=email]").value = "";
+	}
 
-        function show(response) {
-            document.querySelector("#response").textContent = svartekst;
-        }
+	function show(response) {
+		document.querySelector("#response").textContent = svartekst;
+	}
 
-        tilmeld.addEventListener("click", visModal);
+	tilmeld.addEventListener("click", visModal);
 
-        function visModal() {
+	function visModal() {
 
-            //ved klik på tilmeldingsboxen vises modal vindu med indhold.
-            modal.classList.add("vis");
+		//ved klik på tilmeldingsboxen vises modal vindu med indhold.
+		modal.classList.add("vis");
 
-            //ved klik på close button fjernes modal vinduet med indholdet.
-            close.addEventListener("click", skjulModal);
+		//ved klik på close button fjernes modal vinduet med indholdet.
+		close.addEventListener("click", skjulModal);
 
-        }
+	}
 
-        function skjulModal() {
-            //css med modal vis bliver skjult igen
-            modal.classList.remove("vis");
-        }
+	function skjulModal() {
+		//css med modal vis bliver skjult igen
+		modal.classList.remove("vis");
+	}
