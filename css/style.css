@@ -114,6 +114,9 @@ a:hover {
 
 header {
 	position: relative;
+	height: 120px;
+	width: 100%;
+	background-color: var(--blue);
 }
 
 .logo {
@@ -150,9 +153,8 @@ main {
 /*nav*/
 
 nav {
-	height: 120px;
-	width: 100%;
-	background-color: var(--blue);
+	display: none;
+	padding-top: 50px;
 }
 
 nav a {
@@ -175,14 +177,12 @@ nav ul {
 	flex-direction: row;
 	list-style: none;
 	margin: 0;
-	padding-top: 50px;
 	padding-bottom: 0;
 	padding-left: 0;
 	padding-right: 0;
 }
 
 nav li {
-	display: inline;
 	padding: 15px;
 	cursor: pointer;
 }
@@ -942,21 +942,49 @@ footer p {
 	.kommende_events .billede {
 		max-height: 15vw;
 	}
+}
 
-	@media screen and (min-width: 1080px) {
+@media screen and (min-width: 980px) {
 
-		.kommende_events .content {
-			grid-template-columns: repeat(3, 1fr);
-		}
-
-		.kommende_events .billede {
-			max-height: 10vw;
-		}
+	nav {
+		display: block;
 	}
 
-	@media screen and (min-width: 1280px) {
-
-		.kommende_events .content {
-			grid-template-columns: repeat(5, 1fr);
-		}
+	nav ul {
+		justify-content: flex-end;
+		margin-right: 15px;
 	}
+
+	.burger {
+		display: none;
+	}
+}
+
+
+
+@media screen and (min-width: 1080px) {
+
+	nav ul {
+		margin-left: 20%;
+	}
+
+	.kommende_events .content {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.kommende_events .billede {
+		max-height: 10vw;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+
+	nav ul {
+		justify-content: center;
+		margin-left: 10%;
+	}
+
+	.kommende_events .content {
+		grid-template-columns: repeat(5, 1fr);
+	}
+}
