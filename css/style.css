@@ -1,5 +1,3 @@
-
-
 /* ---------------------------- */
 
 :root {
@@ -125,7 +123,12 @@ header {
 }
 
 .logo img {
-	max-width: 180px;
+	width: 180px;
+}
+
+.logo:hover {
+	transform: scale(1.1);
+	transition: 1s ease;
 }
 
 
@@ -184,9 +187,7 @@ nav li {
 	cursor: pointer;
 }
 
-nav li:hover {
-	/*	background-color: #fc9fd4;*/
-}
+
 
 nav ul li {
 	position: relative;
@@ -205,22 +206,98 @@ nav .dropdown > ul {
 	z-index: 50;
 	padding: 15px;
 	overflow: hidden;
-	transition: 0.5s ease;
+	transition: 0.5s ease-out;
 }
 
 nav .dropdown > ul li {
 	white-space: nowrap;
 	padding: 0 0em;
 	font-size: 1em;
-
 }
 
 nav .dropdown:hover > ul {
 	height: auto;
-	display: block;
+	overflow: visible;
 	opacity: 1;
 	background-color: var(--blue);
+}
 
+/* navigation-knap i højre hjørne i mobile view */
+
+.nav-knap {
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: auto;
+	height: auto;
+	line-height: 0;
+	padding: 25px;
+	z-index: 100;
+}
+
+.burger {
+	cursor: pointer;
+	background: transparent;
+	border: none;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+	width: 35px;
+	height: 2px;
+	background-color: #fff;
+	margin: 9px 0;
+	transition: 0.4s;
+	box-shadow: 1px 1px 10px #000, 1px 1px 10px #ccc;
+}
+
+.burger:hover {
+	transform: scale(1.2);
+	transition: 1s;
+}
+
+.change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 9px);
+	transform: rotate(-45deg) translate(-9px, 9px);
+}
+
+.change .bar2 {
+	opacity: 0;
+}
+
+.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-7px, -8px);
+	transform: rotate(45deg) translate(-7px, -8px);
+	box-shadow: 1px 1px 10px transparent, 1px 1px 10px transparent;
+}
+
+:focus {
+	outline: 0;
+}
+
+/*pulsering for UX - - - klik eller luk, og brug ikke tilbageknap*/
+
+.pulse {
+	animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+
+	80% {
+		transform: scale(1);
+	}
+
+	90% {
+		transform: scale(1.5);
+	}
+
+	100% {
+		transform: scale(1);
+	}
 }
 
 /* ---------------------------- */
@@ -379,7 +456,7 @@ nav .dropdown:hover > ul {
 #tilmeld {
 	background-color: #fbe4ef;
 	width: 20vh;
-	height: 12vh;
+	height: auto;
 	border-radius: 3.5px;
 	border: none;
 	text-align: center;
@@ -387,6 +464,7 @@ nav .dropdown:hover > ul {
 	right: 2vw;
 	bottom: 2vw;
 	z-index: 300;
+	cursor: pointer;
 }
 
 #tilmeld p {
@@ -604,25 +682,6 @@ input {
 	font-size: 1.4rem;
 	font-weight: bold;
 	align-self: center;
-}
-
-button {
-	grid-column: 11 / 13;
-	padding: 10px;
-	height: 40px;
-	margin: auto;
-	margin-right: 0;
-	width: 100%;
-	background-color: white;
-	border: 1px solid var(--blue);
-	transition: 0.3s;
-	font-size: 1.4rem;
-}
-
-button:hover {
-	background-color: var(--blue);
-	color: var(--red_tint);
-	cursor: pointer;
 }
 
 .event_buy_knap,
