@@ -1,3 +1,8 @@
+if (window.innerWidth < 980) {
+
+
+
+
 	//		nav-menu-mobile - eventlisterns
 
 	document.addEventListener("DOMContentLoaded", function (event) {
@@ -25,7 +30,9 @@
 			document.querySelector("header").classList.remove("show");
 			document.querySelector(".burger").classList.remove("pulse");
 		}
+
 		document.querySelector(".burger").addEventListener("click", toggleMenu);
 		document.querySelector("nav ul").addEventListener("click", toggleMenu);
 		document.querySelector("nav ul").addEventListener("mouseleave", closeMenu);
 	}
+}

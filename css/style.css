@@ -121,7 +121,8 @@ header {
 }
 
 header.show {
-	height: auto;
+	height: 500px;
+	padding-bottom: 20px;
 }
 
 .logo {
@@ -138,7 +139,6 @@ header.show {
 	transform: scale(1.1);
 	transition: 1s ease;
 }
-
 
 main {
 	width: 100%;
@@ -169,6 +169,8 @@ nav a {
 	text-transform: uppercase;
 	font-size: 1.2rem;
 	letter-spacing: 0.1rem;
+	display: block;
+	padding: 20px;
 }
 
 nav a:hover {
@@ -190,7 +192,6 @@ nav ul {
 }
 
 nav li {
-	padding: 15px;
 	cursor: pointer;
 }
 
@@ -213,11 +214,10 @@ nav .dropdown > ul {
 
 nav .dropdown > ul li {
 	white-space: nowrap;
-	padding: 15px;
 	font-size: 1em;
 }
 
-nav .dropdown:hover > ul {
+nav .dropdown.show {
 	height: auto;
 	overflow: visible;
 	opacity: 1;
@@ -958,6 +958,7 @@ footer p {
 		text-transform: uppercase;
 		font-size: 1.2rem;
 		letter-spacing: 0.1rem;
+		padding: 10px 0 10px 0;
 	}
 
 	nav a:hover {
@@ -986,6 +987,7 @@ footer p {
 		position: relative;
 		font-size: 1.5em;
 		display: block;
+		text-align: left;
 	}
 
 	nav .dropdown > ul {
