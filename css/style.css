@@ -121,8 +121,9 @@ header {
 }
 
 header.show {
-	height: 500px;
+	height: 175vh;
 	padding-bottom: 20px;
+	z-index: 500;
 }
 
 .logo {
@@ -158,8 +159,9 @@ main {
 /*nav - mobile*/
 
 nav {
-	display: none;
+	opacity: 0;
 	padding-top: 100px;
+	transition: 1s ease;
 }
 
 nav a {
@@ -209,7 +211,7 @@ nav .dropdown > ul {
 	position: relative;
 	z-index: 50;
 	overflow: hidden;
-	transition: 3s ease-out;
+	transition: 1s ease-out;
 }
 
 nav .dropdown > ul li {
@@ -218,14 +220,14 @@ nav .dropdown > ul li {
 }
 
 nav .dropdown.show {
-	height: auto;
+	height: 175vh;
 	overflow: visible;
 	opacity: 1;
 	background-color: var(--blue);
 }
 
 nav.show {
-	display: block;
+	opacity: 1;
 }
 
 /* navigation-knap i højre hjørne i mobile view */
@@ -801,7 +803,7 @@ body {
 	font-size: 25px;
 	padding: 8px 12px;
 	position: absolute;
-	bottom: 8px;
+	bottom: 75px;
 	width: 100%;
 	text-align: right;
 	background: #24195d;
@@ -1106,7 +1108,7 @@ footer p {
 	/*nav - desktop */
 
 	nav {
-		display: none;
+		opacity: 1;
 		padding-top: 50px;
 	}
 
