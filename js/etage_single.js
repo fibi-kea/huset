@@ -45,12 +45,8 @@
 
 					console.log(etage.acf.splash_image);
 					dest.querySelector("[data-title]").textContent = etage.title.rendered;
-					dest.querySelector("[data-beskrivelse]").textContent = etage.acf.kort_beskrivelse;
+					dest.querySelector("[data-beskrivelse]").textContent = etage.acf.lang_beskrivelse;
 
-					//	Link fra knap
-					dest.querySelector("[data-link]").addEventListener("click", () => {
-						window.location.href = "etager.html?id=" + etage.id;
-					});
 				}
 			})
 		}
