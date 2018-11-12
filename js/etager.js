@@ -49,7 +49,7 @@
 
 			//	Link fra knap
 			klon.querySelector("[data-link]").addEventListener("click", () => {
-				window.location.href = "etager.html?id=" + etage.id;
+				window.location.href = "etage_single.html?id=" + etage.id;
 			});
 
 			// tilføj html DOM
