@@ -7,13 +7,13 @@
 	<title>Events</title>
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/slide.css">
 </head>
 
 <body>
 
 	<header>
 		<div class="logo"><a href="index.html"><img src="img/logo.svg" alt="logo"></a></div>
-
 		<!--burgermenu i højre hjørne (skjult i desktop)-->
 		<div class="nav-knap">
 			<button class="burger">
@@ -43,9 +43,37 @@
 			</ul>
 		</nav>
 	</header>
+	<!-- html til slideshow   -->
 
 	<div class="splash">
-		<img src="img/diy1.jpg" alt="">
+		<div class="slideshow-container">
+			<!-- html for hvert enkelte slide billede    -->
+			<div class="mySlides fade">
+				<img src="img/slide1.jpg">
+				<div class="text">Lystløgner aften d.3/12 2018</div>
+			</div>
+			<!-- html for hvert enkelte slide billede    -->
+			<div class="mySlides fade">
+				<img src="img/slide2.jpg">
+				<div class="text">David Besiakov Group d.23/12 2018</div>
+			</div>
+			<!-- html for hvert enkelte slide billede    -->
+			<div class="mySlides fade">
+				<img src="img/slide3.jpg">
+				<div class="text">Samlingspunkt Indre By d.3/4 2019</div>
+			</div>
+			<!--  html for de to knapper #koden er pilene  -->
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+		</div>
+		<br>
+		<!-- Html for knapperne i bunden der viser hvor man er på siden   -->
+		<div>
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+		</div>
 	</div>
 
 	<main>
@@ -99,10 +127,7 @@
 		<div class="content">
 			<div class="footer_contact">
 				<p><span class="bold">HUSET-KBH</span></p>
-				<p>Rådhusstræde 13<br>
-					1466 København K<br>
-					Tlf: 21 51 21 51<br>
-					info@huset-kbh.dk
+				<p>Rådhusstræde 13<br> 1466 København K<br> Tlf: 21 51 21 51<br> info@huset-kbh.dk
 				</p>
 			</div>
 
@@ -127,6 +152,7 @@
 	<!--Javascript-->
 	<script src="js/burgermenu.js"></script>
 	<script src="js/events.js"></script>
+	<script src="js/slide.js"></script>
 </body>
 
 </html>
