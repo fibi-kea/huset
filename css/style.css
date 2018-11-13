@@ -350,7 +350,6 @@ nav.show {
 .kommende_events {
 	background-color: #fff;
 	color: #24195d;
-	cursor: pointer;
 }
 
 .kommende_events .content {
@@ -369,6 +368,7 @@ nav.show {
 .kommende_events .event-wrapper:hover {
 	transition: all 0.5s ease-in-out;
 	opacity: 0.5;
+	cursor: pointer;
 }
 
 .kommende_events .rubrik {
@@ -441,6 +441,16 @@ nav.show {
 	color: var(--blue);
 	border: 1px solid var(--blue);
 	text-decoration: none;
+}
+
+
+.forsidetext {
+	grid-column: 1 / 4;
+	margin-top: 50px;
+/*
+	background-color: var(--red_tint);
+	padding: 30px;
+*/
 }
 
 /* ---------------------------- */
@@ -1016,7 +1026,6 @@ footer .content {
 	max-width: 960px;
 	margin: 0 auto;
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
 	grid-column-gap: 30px;
 }
 
@@ -1027,7 +1036,6 @@ footer.forside .content {
 	grid-template-columns: repeat(2, 1fr);
 	grid-column-gap: 30px;
 }
-
 
 footer p {
 	color: var(--red_tint);
@@ -1117,6 +1125,10 @@ footer p {
 	}
 
 	footer .content {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	footer.forside .content {
 		grid-template-columns: repeat(3, 1fr);
 	}
 
@@ -1401,6 +1413,10 @@ footer p {
 	}
 
 	footer .content {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	footer.forside .content {
 		grid-template-columns: repeat(4, 1fr);
 	}
 
