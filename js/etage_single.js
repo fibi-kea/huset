@@ -36,7 +36,7 @@
 				//hvis id navn matcher, så kør loop
 				if (etage.id == id) {
 
-					dest.querySelector("[data-splash_image]").setAttribute("src", etage.acf.splash_image.sizes.medium_large);
+					dest.querySelector("[data-splash_image]").setAttribute("src", etage.acf.splash_image.sizes.large);
 
 					//	Link fra billede
 					dest.querySelector("[data-splash_image]").addEventListener("click", () => {
