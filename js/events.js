@@ -24,7 +24,7 @@
 		console.log("hentJson");
 
 		//	Hent wordpress content fra flere custom post types (multiple-post-type plugin endpoint)
-		let jsonData = await fetch("http://erik-crg.dk/kea/07-cms/huset-kbh/wordpress/wp-json/wp/v2/multiple-post-type?&type[]=musikevents&type[]=filmevents&type[]=ordevent&type[]=teaterevents&type[]=scenekunst&per_page=100");
+		let jsonData = await fetch("http://erik-crg.dk/kea/07-cms/huset-kbh/wordpress/wp-json/wp/v2/multiple-post-type?&type[]=musikevents&type[]=filmevents&type[]=ordevent&type[]=teaterevents&type[]=scenekunst&type[]=andet_event&per_page=100");
 
 		events = await jsonData.json();
 
