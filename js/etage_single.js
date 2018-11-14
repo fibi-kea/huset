@@ -45,8 +45,7 @@
 
 					console.log(etage.acf.splash_image);
 					dest.querySelector("[data-title]").textContent = etage.title.rendered;
-					dest.querySelector("[data-beskrivelse]").textContent = etage.acf.lang_beskrivelse;
-
+					dest.querySelector("[data-content]").innerHTML = etage.content.rendered;
 				}
 			})
 		}
