@@ -33,6 +33,16 @@ if (window.innerWidth < 980) {
 
 		document.querySelector(".burger").addEventListener("click", toggleMenu);
 		document.querySelector("nav ul").addEventListener("click", toggleMenu);
-		document.querySelector("nav ul").addEventListener("mouseleave", closeMenu);
+		document.querySelector("nav .sprog").addEventListener("click", toggleMenu);
+
+		//	luk menu, hvis der bruges enter-knap i searchfeltet
+		let input = document.querySelector("#search");
+		input.addEventListener("keyup", function (event) {
+			event.preventDefault();
+			if (event.keyCode === 13) {
+				closeMenu();
+			}
+		});
+
 	}
 }

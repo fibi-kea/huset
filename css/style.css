@@ -337,7 +337,7 @@ nav.show {
 }
 
 .search-container a:hover {
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 .search_icon {
@@ -369,6 +369,12 @@ header input::placeholder {
 	float: right;
 	margin-top: 5px;
 	margin-left: 5px;
+	cursor: pointer;
+	color: var(--red_tint);
+}
+
+.sprog:hover {
+	cursor: pointer;
 }
 
 
@@ -1274,6 +1280,10 @@ footer p {
 	nav ul li:nth-last-child(1) ul {
 		position: absolute;
 		left: -85px;
+	}
+
+	nav ul li:nth-last-child(1) {
+		padding-right: 0;
 	}
 
 	nav ul li:nth-last-child(2) ul {
