@@ -22,7 +22,6 @@ body {
 	/*clear all space*/
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
 }
 
 /*responsive img*/
@@ -30,6 +29,11 @@ img {
 	width: 100%;
 }
 
+* {
+	box-sizing: border-box;
+}
+
+box-sizing: border-box;
 /* ---------------------------- */
 
 /*Title*/
@@ -523,14 +527,34 @@ header input::placeholder {
 	text-decoration: none;
 }
 
+.intro {
+	background-color: var(--red_tint);
+	color: #24195d;
+	margin-top: 40px;
+	padding-bottom: 40px;
+}
+
+.intro .content {
+	width: 75%;
+	margin: 0 auto;
+	padding: 10px;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-gap: 30px;
+}
 
 .forsidetext {
-	grid-column: 1 / 4;
+	grid-column: 1 / 2;
 	margin-top: 50px;
-	/*
-	background-color: var(--red_tint);
-	padding: 30px;
-*/
+}
+
+.mobile-app {
+	grid-column: 1 / 2;
+	margin-top: 50px;
+}
+
+.mobile-app img {
+	width: 80%;
 }
 
 /* ---------------------------- */
@@ -1104,11 +1128,12 @@ input {
 /*footer*/
 
 footer {
-	width: 100%;
+	max-width: 100%;
 	background-color: var(--blue);
 	margin-top: 80px;
-	padding: 25px 0 25px 0;
+	padding: 25px;
 }
+
 
 footer .content {
 	grid-template-columns: repeat(2, 1fr);
@@ -1178,7 +1203,8 @@ footer p {
 		font-size: 8rem;
 	}
 
-	.kommende_events .content {
+	.kommende_events .content,
+	.intro .content {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
@@ -1211,6 +1237,16 @@ footer p {
 		grid-column: 11 / 13;
 		align-self: center;
 		width: 100%;
+	}
+
+	.forsidetext {
+		grid-column: 1 / 2;
+		margin-top: 50px;
+	}
+
+	.mobile-app {
+		grid-column: 2 / 3;
+		margin-top: 50px;
 	}
 
 	footer .content {
@@ -1354,7 +1390,8 @@ footer p {
 		margin-left: 20%;
 	}
 
-	.kommende_events .content {
+	.kommende_events .content,
+	.intro .content {
 		grid-template-columns: repeat(3, 1fr);
 	}
 
@@ -1519,6 +1556,16 @@ footer p {
 		font-weight: bold;
 	}
 
+	.forsidetext {
+		grid-column: 1 / 3;
+		margin-top: 50px;
+	}
+
+	.mobile-app {
+		grid-column: 3 / 4;
+		margin-top: 50px;
+	}
+
 	footer {
 		padding: 25px 0 25px 0;
 	}
@@ -1565,7 +1612,8 @@ footer p {
 		text-align: left;
 	}
 
-	.kommende_events .content {
+	.kommende_events .content,
+	.intro .content {
 		grid-template-columns: repeat(5, 1fr);
 	}
 
@@ -1573,9 +1621,21 @@ footer p {
 		grid-column: 2 / 3;
 	}
 
+	.forsidetext {
+		grid-column: 1 / 4;
+		margin-top: 50px;
+	}
 
-	/* ---------------------------- */
+	.mobile-app {
+		grid-column: 4 / 6;
+		margin-top: 50px;
+		padding-left: 100px;
 
+	}
+
+	.mobile-app img {
+		width: 60%;
+	}
 
 	.etager {
 		padding-left: 30px;

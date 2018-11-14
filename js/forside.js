@@ -4,13 +4,20 @@
 	let eventTemplate = document.querySelector("[data-template]");
 	let eventContainer = document.querySelector("[data-container]");
 
+	//	globale variabeler
+	let sider = [];
+	let dest = document.querySelector("[side-container]");
+
 	//	dokument DOM loadet
-	document.addEventListener("DOMContentLoaded", hentJson);
+	document.addEventListener("DOMContentLoaded", hentJsonEvents);
+
+	//	dokument DOM loadet
+	document.addEventListener("DOMContentLoaded", hentJsonSide);
 
 
 	//	hent json
-	async function hentJson() {
-		console.log("hentJson");
+	async function hentJsonEvents() {
+		console.log("hentJsonEvents");
 
 		//	Hent wordpress content fra flere custom post types (multiple-post-type plugin endpoint)
 		let jsonData = await fetch("http://erik-crg.dk/kea/07-cms/huset-kbh/wordpress/wp-json/wp/v2/multiple-post-type?&type[]=musikevents&type[]=filmevents&type[]=ordevent&type[]=andet_event");
@@ -113,6 +120,38 @@
 			eventContainer.appendChild(klon);
 			console.log("loop er kørt");
 		});
+	}
+
+
+	//	hent jsonPage til forsidehentning
+
+	async function hentJsonSide() {
+		console.log("hentJsonSide");
+
+		//	Hent wordpress content fra flere custom post types
+		let jsonData = await fetch("http://erik-crg.dk/kea/07-cms/huset-kbh/wordpress/wp-json/wp/v2/sider");
+
+		sider = await jsonData.json();
+
+		//	test json-import
+		console.log(sider);
+
+		visSider();
+	}
+
+
+	//	Event-loop
+	function visSider() {
+
+		//	Kør loop med json-data
+		sider.forEach(side => {
+			let dest = document.querySelector("[side-container]");
+
+			//hvis id navn matcher, så kør loop
+			if (side.id == 173) {
+				dest.querySelector("[data-content]").innerHTML = side.content.rendered;
+			}
+		})
 	}
 
 	//Tilmelding - nyhedsbrev

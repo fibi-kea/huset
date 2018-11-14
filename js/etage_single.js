@@ -15,7 +15,7 @@
 		async function hentJson() {
 			console.log("hentJson");
 
-			//	Hent wordpress content fra flere custom post types (multiple-post-type plugin endpoint)
+			//	Hent wordpress content fra flere custom post types
 			let jsonData = await fetch("http://erik-crg.dk/kea/07-cms/huset-kbh/wordpress/wp-json/wp/v2/husets_etager");
 
 			etager = await jsonData.json();
