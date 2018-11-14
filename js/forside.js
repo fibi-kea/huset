@@ -4,16 +4,8 @@
 	let eventTemplate = document.querySelector("[data-template]");
 	let eventContainer = document.querySelector("[data-container]");
 
-	//	globale variabeler
-	let sider = [];
-	let dest = document.querySelector("[side-container]");
-
 	//	dokument DOM loadet
 	document.addEventListener("DOMContentLoaded", hentJsonEvents);
-
-	//	dokument DOM loadet
-	document.addEventListener("DOMContentLoaded", hentJsonSide);
-
 
 	//	hent json
 	async function hentJsonEvents() {
@@ -123,6 +115,20 @@
 	}
 
 
+	//-----------------------------------------------------------------------------
+
+
+	// hent sidefelter
+
+	//	globale variabeler
+	let sider = [];
+	let dest = document.querySelector("[side-container]");
+
+
+	//	dokument DOM loadet
+	document.addEventListener("DOMContentLoaded", hentJsonSide);
+
+
 	//	hent jsonPage til forsidehentning
 
 	async function hentJsonSide() {
@@ -153,6 +159,25 @@
 			}
 		})
 	}
+
+
+	if (window.innerWidth < 768) {
+
+		//		nav-menu-mobile - eventlisterns
+		document.querySelector(".mobile_app_link").addEventListener("click", () => {
+			window.location.href = "http://erik-crg.dk/kea/07-cms/huset-kbh/mobile/";
+		});
+	}
+
+
+
+
+
+
+
+
+
+	//-----------------------------------------------------------------------------
 
 	//Tilmelding - nyhedsbrev
 

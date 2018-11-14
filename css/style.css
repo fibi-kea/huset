@@ -33,7 +33,6 @@ img {
 	box-sizing: border-box;
 }
 
-box-sizing: border-box;
 /* ---------------------------- */
 
 /*Title*/
@@ -556,6 +555,28 @@ header input::placeholder {
 .mobile-app img {
 	width: 80%;
 }
+
+.mobile_app_link {
+	display: block;
+	margin-top: 20px;
+	padding: 5px;
+	width: 150px;
+	background-color: var(--blue);
+	transition: 0.3s;
+	font-size: 1.4rem;
+	text-align: center;
+	color: white;
+	border: 1px solid var(--blue);
+	cursor: pointer;
+}
+
+.mobile_app_link:hover {
+	background-color: #fff;
+	color: var(--blue);
+	border: 1px solid var(--blue);
+	text-decoration: none;
+}
+
 
 /* ---------------------------- */
 
@@ -1249,6 +1270,11 @@ footer p {
 		margin-top: 50px;
 	}
 
+	.mobile_app_link {
+		display: none;
+	}
+
+
 	footer .content {
 		grid-template-columns: repeat(3, 1fr);
 	}
@@ -1379,7 +1405,6 @@ footer p {
 	.burger {
 		display: none;
 	}
-
 }
 
 /*- - - - - - - - - - - - - media queries 1080px - - - - - - - - - - - - -*/
