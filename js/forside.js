@@ -165,17 +165,9 @@
 
 		//		nav-menu-mobile - eventlisterns
 		document.querySelector(".mobile_app_link").addEventListener("click", () => {
-			window.location.href = "http://erik-crg.dk/kea/07-cms/huset-kbh/mobile/";
+			window.location.href = "https://erik-crg.dk/kea/07-cms/huset-kbh/mobile/";
 		});
 	}
-
-
-
-
-
-
-
-
 
 	//-----------------------------------------------------------------------------
 
