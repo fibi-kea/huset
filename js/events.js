@@ -12,10 +12,6 @@
 	id = "event_" + id;
 	console.log("urlParams id er: " + id)
 
-	//	preload img-url fra link, så accordion højde passer
-	//	let preloadImage = new Image();
-	//	preloadImage.src = preload;
-
 	//	dokument DOM loadet
 	document.addEventListener("DOMContentLoaded", hentJson);
 
@@ -54,7 +50,8 @@
 			let str = event.acf.dato;
 			console.log("hel dato: " + str);
 
-			//	omform måned fra tal til 3 bugstaver - fjern evt. 0 i start af streng
+			//	omform måned fra tal til 3 bugstaver
+//- fjern evt. 0 i start af streng
 			let eventMaaned = str.substring(4, 6).replace(/^0+/, '');
 
 			if (eventMaaned == 1) {
