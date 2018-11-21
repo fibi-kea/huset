@@ -18,6 +18,7 @@ body {
 	line-height: 2.5rem;
 	letter-spacing: 0.05rem;
 	color: black;
+	min-height: 100vh;
 
 	/*clear all space*/
 	margin: 0;
