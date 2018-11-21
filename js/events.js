@@ -60,7 +60,7 @@
 			hentJson();
 		});
 
-		//	Flyt markering af filter til den valgte knap og hop til #filter
+		//	Flyt markering af filter til den valgte knap
 		var btns = document.getElementsByClassName("filter_knap");
 		for (var i = 0; i < btns.length; i++) {
 			btns[i].addEventListener("click", function () {
@@ -69,7 +69,6 @@
 					current[0].className = current[0].className.replace(" valgt", "");
 				}
 				this.className += " valgt";
-				window.location.hash = "#filter";
 			});
 		}
 
